@@ -1,4 +1,18 @@
-.card-groupe{
-    display:flex;
-    flex-direction:column;
+.tout{
+    margin:20px;
 }
+
+
+.card-group{
+
+    display: flex;
+    width:70em;
+    flex-wrap: wrap;
+    margin-bottom:10px;
+  
+}
+
+.card-group p{
+    font-size:11px;
+}
+
