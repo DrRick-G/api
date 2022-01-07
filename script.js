@@ -79,7 +79,8 @@ let search = document.querySelector('form')
  
     
 
-axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`)
+function one(){
+    axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`)
     .then(response => {
         let resultats = response.data.results;
             AfficherData(resultats);
@@ -180,6 +181,143 @@ function one() {
     }
         
     }
+}
+
+function two() {
+        fetch (`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=2`)
+.then(reponse => reponse.json())
+.then (data => {
+    displayMovie(data.results)
+    console.log(data.results)
+    
+})
+
+    btn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        console.log(mot.value);
+        if (mot.value) {
+            fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${mot.value}`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            displayMovie(data.results)
+        })
+        } else {
+            alert("pas de correspondance") 
+        }
+        
+    });
+
+    function displayMovie(data) {
+        let ecran = document.getElementById("ecran");
+        ecran.innerHTML ="";
+        if (data.length != 0) {
+            for (let i = 0; i < data.length; i++) {
+
+                ecran.innerHTML += `<div class="card-group col-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://image.tmdb.org/t/p/w500${data[i].poster_path}" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">${data[i].title}</h5>
+                    </div>
+                </div>`
+                
+            }
+        }
+    }
+        
+    }
+    
+function trois() {
+        fetch (`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=3`)
+.then(reponse => reponse.json())
+.then (data => {
+    displayMovie(data.results)
+    console.log(data.results)
+    
+})
+
+    btn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        console.log(mot.value);
+        if (mot.value) {
+            fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${mot.value}`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            displayMovie(data.results)
+        })
+        } else {
+            alert("pas de correspondance") 
+        }
+        
+    });
+
+    function displayMovie(data) {
+        let ecran = document.getElementById("ecran");
+        ecran.innerHTML ="";
+        if (data.length != 0) {
+            for (let i = 0; i < data.length; i++) {
+
+                ecran.innerHTML += `<div class="card-group col-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://image.tmdb.org/t/p/w500${data[i].poster_path}" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">${data[i].title}</h5>
+                    </div>
+                </div>`
+                
+            }
+        }
+    }
+        
+    }
+
+function quatre() {
+        fetch (`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=3`)
+.then(reponse => reponse.json())
+.then (data => {
+    displayMovie(data.results)
+    console.log(data.results)
+    
+})
+
+    btn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        console.log(mot.value);
+        if (mot.value) {
+            fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${mot.value}`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            displayMovie(data.results)
+        })
+        } else {
+            alert("pas de correspondance") 
+        }
+        
+    });
+
+    function displayMovie(data) {
+        let ecran = document.getElementById("ecran");
+        ecran.innerHTML ="";
+        if (data.length != 0) {
+            for (let i = 0; i < data.length; i++) {
+
+                ecran.innerHTML += `<div class="card-group col-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://image.tmdb.org/t/p/w500${data[i].poster_path}" alt="Card image cap">
+                        <div class="card-body">
+                        <h5 class="card-title">${data[i].title}</h5>
+                    </div>
+                </div>`
+                
+            }
+        }
+    }
+        
+    }
+
 
 
 
