@@ -15,13 +15,22 @@
    <div class="container">
     <div class="tout" style="text-align: center;">
         <h1>Film</h1>
-        <div class="form-group">
-                <div class="form-group row">
-                        <input type="text" class="form-control col-4" id="query" placeholder="Saisir votre recherche">
-                    <input type="submit" class="form-control col-2 btn-primary" id="inputValue" value="Rechercher">
-                    </div>
+        <form action="" method="post">
+            <div class="row mb-4">
+                <div class="col">
+                  <div class="form-outline">
+                    <input type="text"class="form-control" id="query" placeholder="Saisir votre recherche">
+                  </div>
                 </div>
-        </div>
+                <div class="col">
+                  <div class="form-outline">
+                    <input type="submit" class="form-control btn-primary"  value="Rechercher" id="inputValue">
+                  </div>
+                </div>
+            </div>
+          
+    
+        </form>
     </div>
    </div>
 
@@ -29,7 +38,33 @@
        
         <div class="card-group" id="ecran">
         </div>
+
+
+        <div class="table">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                      <span class="sr-only" onclick="previous()">Previous</span>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#" onclick="one()">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#" onclick="two()">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#" onclick="trois()">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#" onclick="quatre()">4</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next" onclick="next()">
+                      <span aria-hidden="true">&raquo;</span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+        </div>
+        
     </div>
+    
 
 
 </body>

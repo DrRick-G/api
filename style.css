@@ -12,7 +12,30 @@
   
 }
 
+.card-title a{
+    cursor: pointer;
+}
+
 .card-group p{
     font-size:11px;
+}
+
+table tr td a{
+    text-align: center;
+    border:1px solid rgb(64, 64, 236);
+    cursor: pointer;
+    color: rgb(64, 64, 236);
+    padding:5px;
+}
+
+table tr td a:hover{
+    text-decoration: none;
+    color:black;
+}
+
+.table{
+    justify-content:center;
+    align-items:center;
+    display: flex;
 }
 
